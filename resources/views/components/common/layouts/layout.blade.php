@@ -28,9 +28,7 @@
 
   <main>
 
-    <div>
-      <x-common.banner.banner></x-common.banner.banner>
-    </div>
+    <x-common.banner.banner></x-common.banner.banner>
 
     <div class="container">
       {{ $slot }}
