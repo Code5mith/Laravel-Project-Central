@@ -26,6 +26,6 @@ class LogProjectCreate implements ShouldQueue
     {
         //
         
-        logger("new project created by :", $this->project->user->email);
+        logger("new project created by : ". $this->project->user->email);
     }
 }
