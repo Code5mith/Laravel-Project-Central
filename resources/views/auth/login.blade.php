@@ -2,7 +2,7 @@
 
     <div class="w-100 d-flex flex-column justify-content-center align-items-center">
         <div class="my-1">
-            <img src="favicon.svg" alt="icon" width="60px" height="60px">
+            <img src="/laravel.svg" alt="icon" width="60px" height="60px">
         </div>
         <h1 class="h3 mb-3 fw-normal w-100 text-center fs-2">Log in</h1>
     </div>
