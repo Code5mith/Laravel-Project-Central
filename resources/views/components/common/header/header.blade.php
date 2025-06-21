@@ -2,7 +2,7 @@
 
 
 <div
-    class="w-100 my-2 border-2 pb-1 d-flex flex-row align-items-center justify-content-between">
+    class="w-100 my-2 pb-1 d-flex flex-row align-items-center justify-content-between">
     <div>
 
         <h1> {{ $slot }} </h1>

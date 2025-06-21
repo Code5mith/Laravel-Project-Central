@@ -1,7 +1,7 @@
 <nav class="navbar w-100 navbar-expand-lg bg-body-tertiary sticky-top">
     <div class="container-fluid">
-        <x-common.link.link class="navbar-brand fs-4" href="/"> <img src="/laravel.svg" width="40px" height="40px"
-                alt="icon"> Laravel</x-common.link.link>
+        <x-common.link.link class="navbar-brand fs-4 d-flex flex-row" href="/"> <img src="/laravel.svg" width="40px" height="40px"
+                alt="icon" class="mx-1"> Laravel</x-common.link.link>
 
         <x-common.button.button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
