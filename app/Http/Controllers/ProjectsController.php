@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Mail;
 class ProjectsController extends Controller
-
 {
     public function create()
     {
@@ -27,12 +26,12 @@ class ProjectsController extends Controller
         // form data validation 
 
         request()->validate([
-            "name" => ["required", "min:3", "max:255"], 
+            "name" => ["required", "min:3", "max:255"],
             "budget" => ["max:100"],
             "description" => ["required", "max:500"]
         ]);
 
-        $project  = Project::create([
+        $project = Project::create([
             "user_id" => Auth::user()->id,
             "name" => request("name"),
             "description" => request("description"),
@@ -65,8 +64,9 @@ class ProjectsController extends Controller
 
     }
 
-    public function edit($id) {
-        
+    public function edit($id)
+    {
+
         // inline auth  **refactored middlewares
         // if(Auth::guest()){
         //     redirect("/login");
@@ -76,7 +76,7 @@ class ProjectsController extends Controller
         // if(Project::find($id)->user->isNot(Auth::user())){
         //     abort(403); //forbidden
         // }
-        
+
         // Gate::define("project-owner", function (User $user, Project $project): bool{ This logic is identical to the logic above
         //     return $project->user->is($user);
         // });
@@ -84,12 +84,12 @@ class ProjectsController extends Controller
         $project = Project::findOrFail($id);
 
         Gate::authorize("project-owner", $project); // run gate logic on project resource
-        
+
         return view("projects.edit", ["project" => $project]);
     }
     public function update(Project $project)
     {
- 
+
         // form data validation 
         request()->validate([
             "name" => ["required", "max:255"], // field is Unique 
@@ -111,16 +111,18 @@ class ProjectsController extends Controller
 
     }
 
-    public function destroy(Project $project){
+    public function destroy(Project $project)
+    {
         //auth
 
-       LogProjectDelete::dispatch($project);
 
-       $project->delete();
+        logger($project->user->email . "  deteled project :" . $project->id);
 
-    //    LogProjectDelete::dispatch($project); project can be null **deleted
-       
-       return redirect("/projects");
+        $project->delete();
+
+        //    LogProjectDelete::dispatch($project); project can be null **deleted
+
+        return redirect("/projects");
     }
 
 }

@@ -1,6 +1,11 @@
 <x-common.layouts.auth>
 
-    <h1 class="h3 mb-3 fw-normal w-100 text-center fs-2">Create an account</h1>
+    <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+        <div class="my-1">
+            <img src="/laravel.svg" alt="icon" width="60px" height="60px">
+        </div>
+        <h1 class="h3 mb-3 fw-normal w-100 text-center fs-2">Create an account</h1>
+    </div>
 
     <div class="d-flex flex-column">
 
@@ -9,11 +14,11 @@
             @csrf
 
             <div class="form-floating mb-2">
-                <x-common.form.form-input type="name" class="form-control" id="name" name="name"
-                    placeholder="Jhon Doe" required></x-common.form.form-input>
+                <x-common.form.form-input type="name" class="form-control" id="name" name="name" placeholder="Jhon Doe"
+                    required></x-common.form.form-input>
                 <x-common.form.form-label for="name">Full name</x-common.form.form-label>
             </div>
-            
+
             <x-common.form.form-error field="name"></x-common.form.form-error>
 
             <div class="form-floating mb-2">
