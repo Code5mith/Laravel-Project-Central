@@ -1,7 +1,6 @@
 # **Laravel Project-Central**
 
-
-https://github.com/user-attachments/assets/393c3061-6427-4334-8eb1-fadfa285393e
+https://github.com/user-attachments/assets/2e19e710-2970-4ae8-acf0-119ad0314eea
 
 
 
