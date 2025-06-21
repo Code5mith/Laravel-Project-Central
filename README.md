@@ -1,7 +1,17 @@
 # **Laravel Project-Central**
 
+<<<<<<< HEAD
 https://github.com/user-attachments/assets/2e19e710-2970-4ae8-acf0-119ad0314eea
 
+=======
+
+<<<<<<< HEAD
+https://github.com/user-attachments/assets/393c3061-6427-4334-8eb1-fadfa285393e
+
+=======
+https://github.com/user-attachments/assets/2e19e710-2970-4ae8-acf0-119ad0314eea
+>>>>>>> main
+>>>>>>> nav-fix
 
 
 This repository contains a simple Laravel application designed to help you **track your projects**, **register new project ideas**, and **easily view your completed and active projects**. It serves as a comprehensive demonstration and learning ground for core web development concepts.This repository contains a full-stack web application built with the **Laravel PHP framework**.
